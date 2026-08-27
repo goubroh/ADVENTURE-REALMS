@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adventure Realms - 3D Multiplayer</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div id="app">
+    <canvas id="game-canvas"></canvas>
+
+    <div id="hud" class="hidden">
+      <div id="stats-panel">
+        <div id="online-count">Online: 0</div>
+        <div id="ping-display">Ping: -- ms</div>
+      </div>
+
+      <div id="chat-container">
+        <div id="chat-log"></div>
+        <input type="text" id="chat-input" placeholder="Press Enter to chat..." maxlength="200" autocomplete="off" />
+      </div>
+
+      <div id="crosshair"></div>
+
+      <div id="controls-hint">WASD / Arrows - Move | Space - Jump | Mouse - Look | Enter - Chat</div>
+    </div>
+
+    <div id="connect-overlay">
+      <div class="glass-panel">
+        <h1 class="title">ADVENTURE REALMS</h1>
+        <p class="subtitle">Enter the world. Forge your legend.</p>
+        <input type="text" id="username-input" placeholder="Enter your name" maxlength="16" autocomplete="off" />
+        <button id="join-btn">Enter World</button>
+        <p id="connect-status"></p>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
